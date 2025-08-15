@@ -24,4 +24,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: YiboWei_CV_${{ steps.timestamp.outputs.timestamp }}.pdf
-          path: build/YiboWei_CV_*.pdf
+          path: build/main.pdf
