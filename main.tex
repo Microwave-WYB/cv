@@ -78,8 +78,10 @@
 
 %CV Sections inspired by:
 %http://stefano.italians.nl/archives/26
+% \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+% \titlespacing{\section}{0pt}{10pt}{10pt}
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{4pt}{6pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -137,9 +139,9 @@
 \end{tabularx}
 
 \input{modules/summary.tex}
+\input{modules/education.tex}
 \input{modules/experience.tex}
 \input{modules/projects.tex}
-\input{modules/education.tex}
 % \input{modules/publications.tex}
 \input{modules/skills.tex}
 
