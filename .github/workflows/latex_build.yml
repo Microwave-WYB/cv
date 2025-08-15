@@ -1,0 +1,24 @@
+name: Build LaTeX CV
+on:
+  push:
+    paths:
+      - '*.tex'
+      - 'modules/**'
+      - '.github/workflows/latex_build.yml'
+      - 'Makefile'
+  workflow_dispatch:
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    container: texlive/texlive:latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v3
+      - name: Build with Makefile
+        run: make build
+      - name: Save PDF as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: YiboWei_CV.pdf
+          path: build/main.pdf
